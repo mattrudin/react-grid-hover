@@ -16,5 +16,8 @@
   "license": "ISC",
   "devDependencies": {
     "react": "^16.7.0"
+  },
+  "dependencies": {
+    "styled-components": "^4.1.3"
   }
 }
