@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const ReactIsometricHover = (props) => { // props shall be an object
-    const { content } = props; //content shall be an array
+const ReactIsometricHover = (props) => { 
     const GridContainer = styled.div`
         display: grid;
         grid-gap: 10px;
@@ -10,9 +9,11 @@ const ReactIsometricHover = (props) => { // props shall be an object
         grid-template-rows: repeat(2, 1fr);
     `
     return ( 
-        <GridContainer>
-
-        </GridContainer>
+        <>
+            <GridContainer>
+                {props.children}
+            </GridContainer>
+        </>
      );
 }
 
