@@ -22,7 +22,7 @@ const ReactGridHover = (props) => {
         transition-duration: 0.5s;
         ${designChecker(design) === 'flat' ? "" : 'box-shadow: -2px 2px 1px #888888'};
         :hover {
-            transform: scale(${scaleFactor});
+            transform: scale(${scaleFactorChecker(scaleFactor)});
             ${designChecker(design) === 'flat' ? "" : 'box-shadow: -3px 3px 20px #888888'};
             z-index: 1;
         }

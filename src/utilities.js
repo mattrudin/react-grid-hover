@@ -4,3 +4,12 @@ export const gridDefiner = (children) => {
 }
 
 export const designChecker = string => string === 'flat' ? 'flat' : 'standard';
+
+export const scaleFactorChecker = string => {
+    if(parseFloat(string) > 0) {
+        return string
+     } else {
+        console.error('scaleFactor prop is invalid.')
+        return "1.1"
+     }
+}
