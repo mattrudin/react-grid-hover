@@ -1,15 +1,15 @@
 {
-  "name": "react-isometric-hover-grid",
+  "name": "react-grid-hover",
   "version": "0.0.1",
-  "description": "React component with isometric and hover effect.",
-  "main": "./src/ReactIsometricHover.js",
+  "description": "React component with grid view and hover effect.",
+  "main": "./src/ReactGridHover.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "react-hover",
-    "react-isometric",
-    "isometric",
+    "react-grid",
+    "grid layout",
     "hover"
   ],
   "author": "Matt Rudin",

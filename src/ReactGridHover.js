@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { gridDefiner } from './utilities'
 
-const ReactIsometricHover = (props) => { 
-    const { children, itemSize, skew='left' } = props
+const ReactGridHover = (props) => { 
+    const { children, itemSize } = props
     const columnsNumber = gridDefiner(children)
     const rowsNumber = gridDefiner(children) + 1
 
@@ -14,16 +14,16 @@ const ReactIsometricHover = (props) => {
         height: ${itemSize * rowsNumber}px;
         grid-template-columns: repeat(${columnsNumber}, 1fr);
         grid-template-rows: repeat(${rowsNumber}, 1fr);
-        transform: skewX(${skew === "right" ? "-" : ""}45deg);
     `
 
     const GridChild = styled.div`
         width: ${itemSize}px;
         height: ${itemSize}px;
-        box-shadow: -20px 30px 5px grey;
         transition-duration: 0.5s;
+        box-shadow: -2px 2px 1px #888888;
         :hover {
-            transform: translate3d(0px,-10px,10px);
+            transform: scale(1.1);
+            box-shadow: -3px 3px 20px #888888;
         }
         img {
             width: 100%;
@@ -45,4 +45,4 @@ const ReactIsometricHover = (props) => {
 }
 
 
-export default ReactIsometricHover
+export default ReactGridHover
