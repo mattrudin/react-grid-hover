@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { gridDefiner } from './utilities'
+import { gridDefiner, designChecker } from './utilities'
 
 const ReactGridHover = (props) => { 
     const { children, itemSize, design = 'standard', scaleFactor = '1.1' } = props
@@ -20,10 +20,10 @@ const ReactGridHover = (props) => {
         width: ${itemSize}px;
         height: ${itemSize}px;
         transition-duration: 0.5s;
-        ${design === 'flat' ? "" : 'box-shadow: -2px 2px 1px #888888'};
+        ${designChecker(design) === 'flat' ? "" : 'box-shadow: -2px 2px 1px #888888'};
         :hover {
             transform: scale(${scaleFactor});
-            ${design === 'flat' ? "" : 'box-shadow: -3px 3px 20px #888888'};
+            ${designChecker(design) === 'flat' ? "" : 'box-shadow: -3px 3px 20px #888888'};
             z-index: 1;
         }
         img {
