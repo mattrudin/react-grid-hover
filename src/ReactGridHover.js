@@ -33,15 +33,13 @@ const ReactGridHover = (props) => {
     `
     
     return ( 
-        <>
-            <GridContainer>
-                {children.map(child => (
-                    <GridChild>
-                        {child}
-                    </GridChild>
-                ))}
-            </GridContainer>
-        </>
+        <GridContainer>
+            {children.map(child => (
+                <GridChild>
+                    {child}
+                </GridChild>
+            ))}
+        </GridContainer>
      );
 }
 
