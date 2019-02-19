@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { gridDefiner, designChecker } from './utilities'
+import { gridDefiner, designChecker, scaleFactorChecker } from './utilities'
 
 const ReactGridHover = (props) => { 
     const { children, itemSize, design = 'standard', scaleFactor = '1.1' } = props
