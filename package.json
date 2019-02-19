@@ -13,7 +13,8 @@
     "hover"
   ],
   "author": "Matt Rudin",
-  "license": "ISC",
+  "homepage": "https://github.com/mattrudin/react-grid-hover",
+  "license": "MIT",
   "devDependencies": {
     "react": "^16.7.0"
   },
