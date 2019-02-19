@@ -1,6 +1,6 @@
 {
   "name": "react-grid-hover",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "React component with grid view and hover effect.",
   "main": "./src/ReactGridHover.js",
   "scripts": {
