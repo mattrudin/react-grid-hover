@@ -1,5 +1,7 @@
 # React Grid Hover
 
+![](ReactGridHoverAnimation.gif)
+
 ## Installation
 With npm:
 ```javascript
