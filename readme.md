@@ -14,10 +14,10 @@ import ReactHoverGrid from 'react-hover-grid';
 
 //use it as follows:
 <ReactHoverGrid {...config} > // for the config file, see section Configuration below
-    <img srv='yourSourceURL' alt='altAttribute' />
-    <img srv='yourSourceURL' alt='altAttribute' />
-    <img srv='yourSourceURL' alt='altAttribute' />
-    <img srv='yourSourceURL' alt='altAttribute' />
+    <img src='yourSourceURL' alt='altAttribute' />
+    <img src='yourSourceURL' alt='altAttribute' />
+    <img src='yourSourceURL' alt='altAttribute' />
+    <img src='yourSourceURL' alt='altAttribute' />
 </ReactHoverGrid>
 ```
 
