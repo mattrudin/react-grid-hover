@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { gridDefiner, designChecker, scaleFactorChecker } from './utilities'
 
 const ReactGridHover = (props) => { 
-    const { children, itemSize, design = 'standard', scaleFactor = '1.1' } = props
+    const { children, itemSize = 50, design = 'standard', scaleFactor = '1.1' } = props
     const columnsNumber = gridDefiner(children)
     const rowsNumber = gridDefiner(children) + 1
 

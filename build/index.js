@@ -3222,7 +3222,8 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 
 var ReactGridHover = function ReactGridHover(props) {
     var children = props.children,
-        itemSize = props.itemSize,
+        _props$itemSize = props.itemSize,
+        itemSize = _props$itemSize === undefined ? 50 : _props$itemSize,
         _props$design = props.design,
         design = _props$design === undefined ? 'standard' : _props$design,
         _props$scaleFactor = props.scaleFactor,
