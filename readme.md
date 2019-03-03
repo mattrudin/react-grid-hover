@@ -10,7 +10,7 @@ npm i react-hover-grid
 
 In your react file:
 ```javascript
-import ReactHoverGrid from 'react-hover-grid';
+import ReactHoverGrid from 'react-grid-hover';
 
 //use it as follows:
 <ReactHoverGrid {...config} > // for the config file, see section Configuration below
