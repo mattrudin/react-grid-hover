@@ -15,3 +15,5 @@ export const scaleFactorChecker = string => {
         return "1.1"
      }
 }
+
+export const getNumber = string => string.replace(/\D+$/g, '')

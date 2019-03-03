@@ -530,7 +530,7 @@ module.exports = g;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.scaleFactorChecker = exports.designChecker = exports.gridDefiner = undefined;
+exports.getNumber = exports.scaleFactorChecker = exports.designChecker = exports.gridDefiner = undefined;
 
 var _react = __webpack_require__(1);
 
@@ -554,6 +554,10 @@ var scaleFactorChecker = exports.scaleFactorChecker = function scaleFactorChecke
         console.error('scaleFactor prop is invalid.');
         return "1.1";
     }
+};
+
+var getNumber = exports.getNumber = function getNumber(string) {
+    return string.replace(/\D+$/g, '');
 };
 
 /***/ }),
@@ -3204,7 +3208,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var _templateObject = _taggedTemplateLiteral(['\n        display: grid;\n        grid-gap: 20px;\n        width: ', 'px;\n        height: ', 'px;\n        grid-template-columns: repeat(', ', 1fr);\n        grid-template-rows: repeat(', ', 1fr);\n    '], ['\n        display: grid;\n        grid-gap: 20px;\n        width: ', 'px;\n        height: ', 'px;\n        grid-template-columns: repeat(', ', 1fr);\n        grid-template-rows: repeat(', ', 1fr);\n    ']),
-    _templateObject2 = _taggedTemplateLiteral(['\n        width: ', 'px;\n        height: ', 'px;\n        transition-duration: 0.5s;\n        ', ';\n        :hover {\n            transform: scale(', ');\n            ', ';\n            z-index: 1;\n        }\n        img {\n            width: 100%;\n            height: 100%;\n        }\n    '], ['\n        width: ', 'px;\n        height: ', 'px;\n        transition-duration: 0.5s;\n        ', ';\n        :hover {\n            transform: scale(', ');\n            ', ';\n            z-index: 1;\n        }\n        img {\n            width: 100%;\n            height: 100%;\n        }\n    ']);
+    _templateObject2 = _taggedTemplateLiteral(['\n        width: ', ';\n        height: ', ';\n        transition-duration: 0.5s;\n        ', ';\n        :hover {\n            transform: scale(', ');\n            ', ';\n            z-index: 1;\n        }\n        img {\n            width: 100%;\n            height: 100%;\n        }\n    '], ['\n        width: ', ';\n        height: ', ';\n        transition-duration: 0.5s;\n        ', ';\n        :hover {\n            transform: scale(', ');\n            ', ';\n            z-index: 1;\n        }\n        img {\n            width: 100%;\n            height: 100%;\n        }\n    ']);
 
 var _react = __webpack_require__(1);
 
@@ -3223,7 +3227,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 var ReactGridHover = function ReactGridHover(props) {
     var children = props.children,
         _props$itemSize = props.itemSize,
-        itemSize = _props$itemSize === undefined ? 50 : _props$itemSize,
+        itemSize = _props$itemSize === undefined ? "50px" : _props$itemSize,
         _props$design = props.design,
         design = _props$design === undefined ? 'standard' : _props$design,
         _props$scaleFactor = props.scaleFactor,
@@ -3231,18 +3235,19 @@ var ReactGridHover = function ReactGridHover(props) {
 
     var columnsNumber = (0, _utilities.gridDefiner)(children);
     var rowsNumber = (0, _utilities.gridDefiner)(children) + 1;
+    var itemSizeNum = (0, _utilities.getNumber)(itemSize);
 
-    var GridContainer = _styledComponents2.default.div(_templateObject, itemSize * columnsNumber, itemSize * rowsNumber, columnsNumber, rowsNumber);
+    var GridContainer = _styledComponents2.default.div(_templateObject, itemSizeNum * columnsNumber, itemSizeNum * rowsNumber, columnsNumber, rowsNumber);
 
     var GridChild = _styledComponents2.default.div(_templateObject2, itemSize, itemSize, (0, _utilities.designChecker)(design) === 'flat' ? "" : 'box-shadow: -2px 2px 1px #888888', (0, _utilities.scaleFactorChecker)(scaleFactor), (0, _utilities.designChecker)(design) === 'flat' ? "" : 'box-shadow: -3px 3px 20px #888888');
 
     return _react2.default.createElement(
         GridContainer,
         null,
-        children.map(function (child) {
+        children.map(function (child, index) {
             return _react2.default.createElement(
                 GridChild,
-                null,
+                { key: index },
                 child
             );
         })
