@@ -5,20 +5,20 @@
 ## Installation
 With npm:
 ```javascript
-npm i react-hover-grid
+npm i react-grid-hover
 ```
 
 In your react file:
 ```javascript
-import ReactHoverGrid from 'react-grid-hover';
+import ReactGridHover from 'react-grid-hover';
 
 //use it as follows:
-<ReactHoverGrid {...config} > // for the config file, see section Configuration below
+<ReactGridHover {...config} > // for the config file, see section Configuration below
     <img src='yourSourceURL' alt='altAttribute' />
     <img src='yourSourceURL' alt='altAttribute' />
     <img src='yourSourceURL' alt='altAttribute' />
     <img src='yourSourceURL' alt='altAttribute' />
-</ReactHoverGrid>
+</ReactGridHover>
 ```
 
 ## Configuration
